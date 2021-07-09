@@ -38,8 +38,23 @@ The resulting output should look like this:-
 For both the implementations, the [MNIST](https://en.wikipedia.org/wiki/MNIST_database) Handwritten Digit Recognition Dataset has been used. 
 
 ## Observations:-  
+We fared a conventional CNN against our prototype. Our model could retain its stability even at higher learning rates while the conventional
+CNN showed significant drop in accuracy. Beyond a critical learning rate(around 0.06) it could not converge to a minima most of the times. The model had 
+10 trial runs at each learning rate and the results show the average behaviour over all the runs.<br>
 
-**Coming soon.**
+<img src = "https://github.com/AvirupJU/Fast_Convolution/blob/main/Results/acc_lr.jpg" height="300px" width="450px">
+
+At higher learning rate the conventional CNN "skips" the minima and settles on some sub-optimal point and this adversely affects the model performance.
+But our model does not suffer from the same problem within the practical limits of choosing a leaning rate, given a specific model.
+Since our prototype was tested against a shallow neural network we started from learning rate = 0.01 went upto rates as high as 0.1.<br>
+
+<p float="left">
+  <img src="https://github.com/AvirupJU/Fast_Convolution/blob/main/Results/lr_0.01.jpg" width="400px" />
+  <img src="https://github.com/AvirupJU/Fast_Convolution/blob/main/Results/lr_0.07.jpg" width="420px" /> 
+</p><br>
+
+We also studied the behaviour of our model with varying degrees of singular value decompostion(SVD).
+
 
 ## Acknowledgements:-  
 Parts of the code in this codebase have been adopted from [Pytorch.org](Pytorch.org) and other miscellaneous sources. We are grateful to the respective individuals/organizations for making their work publicly available.
