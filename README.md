@@ -10,7 +10,7 @@ Here we implement ResCNN, a Convolutional neural network featured as an viable a
 
 1. It is recommended to setup a fresh virtual environment first.  
 ```bash
-python -m venv fastcnn
+python -m venv rescnn
 source activate env/bin/activate
 ```
 
